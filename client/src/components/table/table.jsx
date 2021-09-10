@@ -2,37 +2,11 @@ import 'antd/dist/antd.css';
 import { Component } from 'react';
 import { Table, Button, Space } from 'antd';
 
-const data = [
-  {
-    key: '1',
-    name: 'John Brown',
-    age: 11,
-    address: 'New York No. 1 Lake Park',
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    age: 22,
-    address: 'London No. 1 Lake Park',
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 33,
-    address: 'Sidney No. 1 Lake Park',
-  },
-  {
-    key: '4',
-    name: 'Jim Red',
-    age: 44,
-    address: 'London No. 2 Lake Park',
-  },
-];
-
 class SaturnTable extends Component {
   state = {
     filteredInfo: null,
     sortedInfo: null,
+    data: null
   };
 
   handleChange = (pagination, filters, sorter) => {
@@ -63,10 +37,17 @@ class SaturnTable extends Component {
     });
   };
 
+  componentDidMount() {
+    fetch('/api/users/')
+      .then(response => response.json())
+      .then(response => this.setState({data: response.data}))
+  }
+
   render() {
-    let { sortedInfo, filteredInfo } = this.state;
+    let { sortedInfo, filteredInfo, data } = this.state;
     sortedInfo = sortedInfo || {};
     filteredInfo = filteredInfo || {};
+
     const columns = [
       {
         title: 'Name',

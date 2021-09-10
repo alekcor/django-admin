@@ -1,7 +1,8 @@
 import {TeamOutlined, HomeOutlined} from "@ant-design/icons";
-import {Menu} from 'antd';
-import Sider from "antd/es/layout/Sider";
+import {Layout, Menu} from 'antd';
 import {Link} from "react-router-dom";
+
+const {Sider} = Layout;
 
 const {SubMenu} = Menu;
 
