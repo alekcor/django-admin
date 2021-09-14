@@ -1,5 +1,7 @@
+import SaturnTable from "../../components/table/table";
+
 export const User = () => (
   <div>
-    Users Management
+    <SaturnTable />
   </div>
 )

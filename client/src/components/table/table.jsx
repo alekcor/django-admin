@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { Table, Button, Space } from 'antd';
 
 class SaturnTable extends Component {
+  //TODO - There's a lot of User related information here that should be in the User's page.
   state = {
     filteredInfo: null,
     sortedInfo: null,
