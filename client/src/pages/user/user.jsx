@@ -1,7 +1,7 @@
-import SaturnTable from "../../components/table/table";
+import ModelTable from "../../components/table/table";
 
 export const User = () => (
   <div>
-    <SaturnTable />
+    <ModelTable />
   </div>
 )
