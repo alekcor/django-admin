@@ -1,0 +1,9 @@
+-r requirements.txt
+pytest==6.2.4
+pytest-django==4.4.0
+pytest==6.2.4
+pytest-django==4.4.0
+python-decouple==3.4
+sqlparse==0.4.1
+black==21.6b0
+click==8.0.1
